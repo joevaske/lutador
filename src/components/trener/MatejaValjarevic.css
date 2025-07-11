@@ -1,0 +1,32 @@
+.mateja-valjarevic {
+  width: 100vw;
+  height: auto;
+
+  background-image: linear-gradient(rgba(27, 27, 27, 0.4), rgba(2, 2, 2, 0.7)),
+    url('../../images/coach_bg-min-KMGIJONY.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  /*   display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  padding: 150px 16%;
+}
+.mateja-valjarevic-slika {
+  position: relative;
+  text-align: center;
+}
+
+.mateja-valjarevic-text {
+  color: #f0f0f0;
+}
+.mateja-valjarevic-text p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: 300;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}

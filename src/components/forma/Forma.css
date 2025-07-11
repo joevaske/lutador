@@ -1,0 +1,46 @@
+.lutador-forma {
+  background-image: linear-gradient(rgba(27, 27, 27, 0.2), rgba(2, 2, 2, 0.4)),
+    url('../../images/feedback-bg-min.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 80px 100px;
+}
+.lutador-forma form {
+  width: 550px;
+  margin: 0 auto;
+}
+.lutador-forma input[type='text'],
+.lutador-forma textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: #d4d4d8;
+  /*   box-shadow: 0 0 #0000, 0 0 #0000, 0 1px 2px #0000000d; */
+  resize: none;
+}
+.lutador-forma input[type='text']:focus,
+.lutador-forma textarea:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 1px #ff0e36;
+  border-color: #eb0027;
+}
+.lutador-forma input[type='text'] {
+  height: 30px;
+}
+/* .lutador-forma input[type='submit'] {
+  width: auto;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ */

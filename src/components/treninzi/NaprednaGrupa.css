@@ -1,0 +1,58 @@
+.napredna-grupa {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: linear-gradient(rgba(27, 27, 27, 0.4), rgba(2, 2, 2, 0.7)),
+    url('../../images/tranings_bg_black-min-7YYOFFAC.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 100px;
+}
+
+.napredna-grupa-content {
+  position: relative;
+}
+.napredna-grupa-content-slika {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.napredna-grupa-content-slika-footer p {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.napredna-grupa-text {
+  position: relative;
+}
+
+.napredna-grupa-text-tekst-1 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translateY(-50%);
+}
+.napredna-grupa-text-tekst-1 p {
+  color: #f0f0f0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-left: 4px solid rgba(235, 0, 39, 0.6);
+  margin-bottom: 60px;
+  padding: 0 10px;
+  width: 60%;
+}
+.napredna-grupa-text-tekst-1 p:nth-child(2n) {
+  margin-left: 30%;
+}
+.napredna-grupa-text-icon {
+  display: block;
+  font-size: 2.5rem;
+  color: rgba(235, 0, 39, 0.8);
+  margin-bottom: 10px;
+}

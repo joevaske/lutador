@@ -1,0 +1,23 @@
+.footer {
+  background-image: linear-gradient(rgba(27, 27, 27, 0.2), rgba(2, 2, 2, 0.4)),
+    url('../../images/footer_bg-min-PUVT7MBN.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  color: #fff;
+
+  padding: 100px;
+}
+
+.footer .element {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  text-transform: uppercase;
+}

@@ -1,0 +1,26 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('../../images/header_bg-min.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.greeeting-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow-down {
+  color: white;
+  font-size: 45px;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+}

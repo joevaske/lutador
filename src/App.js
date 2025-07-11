@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Hero from './components/hero/Hero';
+import MainMenu from './components/main-menu/MainMenu';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Treninzi from './components/treninzi/Treninzi';
+import Trener from './components/trener/Trener';
+import Forma from './components/forma/Forma';
+import Footer from './components/Footer/Footer';
+import Contact from './components/contact/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        <MainMenu />
+        <Hero />
+        <Treninzi />
+        <Trener />
+        <Contact />
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
