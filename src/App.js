@@ -7,17 +7,27 @@ import Trener from './components/trener/Trener';
 import Forma from './components/forma/Forma';
 import Footer from './components/Footer/Footer';
 import Contact from './components/contact/Contact';
+import MobileMenu from './components/main-menu/MobileMenu';
+import BigBanner from './components/big-banner/BigBanner';
+/* import MatejaValjarevicBiografija from './components/trener/MatejaValjarevicBiografija'; */
 
 function App() {
   return (
     <Router>
       <div className='App'>
         <MainMenu />
+        <MobileMenu />
         <Hero />
-        <Treninzi />
         <Trener />
+        <Treninzi />
+        <BigBanner />
         <Contact />
         <Footer />
+        {/*  <MatejaValjarevicBiografija /> */}
+        {/*   <Treninzi />
+       
+        <Contact />
+        <Footer /> */}
       </div>
     </Router>
   );

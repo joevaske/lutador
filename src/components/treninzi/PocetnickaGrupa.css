@@ -1,19 +1,143 @@
 .pocetnicka-grupa {
   width: 100vw;
-  height: 100vh;
-
+  /*   height: 750px; */
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.2),
       rgba(255, 255, 255, 0.5)
     ),
     url('../../images/tranings_bg_white-min-FABQOZVP.webp');
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 100px;
+
+  /*   display: grid;
+  grid-template-columns: repeat(1, 1fr); */
+  /* padding: 100px; */
+  padding: 80px 20px;
+  transition: all 0.6s ease-in;
 }
+.pocetnicka-grupa-content-slika {
+  text-align: center;
+}
+.pocetnicka-grupa-content-slika-text p {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  color: rgba(235, 0, 39, 1);
+}
+.prateci-tekstovi {
+  margin: 40px 20px 10px 20px;
+}
+.prateci-tekstovi-tekst-1 p {
+  color: #3f3f46;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-left: 4px solid rgba(235, 0, 39, 0.6);
+  margin-bottom: 30px;
+  padding: 0 10px;
+  width: 100%;
+
+  transition: all 0.3s ease;
+  cursor: crosshair;
+}
+.prateci-tekstovi-tekst-1 p:hover {
+  background-color: rgba(250, 250, 250, 0.4);
+  color: rgba(235, 0, 39, 0.7);
+}
+.prateci-tekstovi-icon {
+  display: block;
+  font-size: 2.5rem;
+  color: rgba(235, 0, 39, 0.8);
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 992px) {
+  .pocetnicka-grupa {
+    width: auto;
+  }
+
+  .prateci-tekstovi {
+    width: 90%;
+
+    margin: 40px auto 10px auto;
+  }
+  .prateci-tekstovi-tekst-1 p {
+    font-size: 1.2rem;
+
+    margin-bottom: 50px;
+  }
+  .pocetnicka-grupa-footer-buttons {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1240px) {
+  .pocetnicka-grupa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: fcenter;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pocetnicka-grupa {
+    width: auto;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: fcenter;
+  }
+  .pocetnicka-grupa:hover {
+    width: 75vw;
+    background-position: center;
+  }
+
+  .pocetnicka-grupa:hover + .napredna-grupa .napredna-grupa-text-tekst-1 p {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+  }
+  .pocetnicka-grupa:hover + .napredna-grupa .napredna-grupa-text {
+    width: 90%;
+  }
+
+  .prateci-tekstovi {
+    width: 80%;
+
+    margin: 40px auto 10px auto;
+  }
+
+  .prateci-tekstovi.selected {
+    width: 90%;
+  }
+  .prateci-tekstovi-tekst-1 p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+  .prateci-tekstovi-tekst-1.selected p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1685px) {
+  .pocetnicka-grupa-footer-buttons.selected .btn {
+    width: 100%;
+  }
+  .pocetnicka-grupa:hover
+    + .napredna-grupa
+    .napredna-grupa-footer-buttons
+    .btn {
+    width: 100%;
+  }
+}
+
+/* .pocetnicka-grupa.animate {
+}
+
 .pocetnicka-grupa-content {
   position: relative;
 }
@@ -35,10 +159,10 @@
 }
 .prateci-tekstovi-tekst-1 p {
   color: #3f3f46;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 500;
   border-left: 4px solid rgba(235, 0, 39, 0.6);
-  margin-bottom: 60px;
+  margin-bottom: 30px;
   padding: 0 10px;
   width: 60%;
 }
@@ -58,3 +182,28 @@
   font-weight: 500;
   margin-bottom: 40px;
 }
+
+.box {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 5s ease-out;
+}
+
+.box.animate {
+  opacity: 1;
+  transform: translateY(0);
+} */
+/* 
+@media only screen and (max-width: 600px) {
+  .pocetnicka-grupa {
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .pocetnicka-grupa-content-slika,
+  .prateci-tekstovi-tekst-1 {
+    position: static;
+  }
+}
+ */

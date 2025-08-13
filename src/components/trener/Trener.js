@@ -1,9 +1,10 @@
-import React from 'react';
 import MatejaValjarevic from './MatejaValjarevic';
+
+import './Trener.css';
 
 const Trener = () => {
   return (
-    <div>
+    <div className='trener'>
       <MatejaValjarevic />
     </div>
   );

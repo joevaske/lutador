@@ -1,3 +1,13 @@
 .mapa {
-  margin-bottom: -4px;
+  width: 50vw;
+}
+.mapa iframe {
+  box-shadow: 3px 5px 41px 0px rgba(0, 0, 0, 0.75) inset;
+}
+
+@media screen and (max-width: 992px) {
+  .mapa {
+    width: 100vw;
+    height: 380px;
+  }
 }

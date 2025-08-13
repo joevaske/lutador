@@ -7,9 +7,26 @@ import { MdSportsMma } from 'react-icons/md';
 import { GiThreeFriends } from 'react-icons/gi';
 import { GiAllForOne } from 'react-icons/gi';
 
-const NaprednaGrupa = () => {
+const NaprednaGrupa = ({
+  selected,
+  setSelectedTrue,
+  setSelectedFalse,
+  setSelected,
+}) => {
   return (
-    <div className='napredna-grupa'>
+    <div
+      className='napredna-grupa'
+      onMouseEnter={setSelectedTrue}
+      onMouseLeave={setSelectedFalse}
+    >
+      <div className='napredna-grupa-content'>
+        <div className='napredna-grupa-content-slika'>
+          <img src={naslovnaSlika} alt='Lutador Bjj - napredna grupa' />
+          <div className='napredna-grupa-content-slika-footer'>
+            <p>Pridruži se našoj naprednoj grupi</p>
+          </div>
+        </div>
+      </div>
       <div className='napredna-grupa-text'>
         <div className='napredna-grupa-text-tekst-1'>
           <p>
@@ -31,21 +48,12 @@ const NaprednaGrupa = () => {
           </p>
         </div>
       </div>
-      <div className='napredna-grupa-content'>
-        <div className='napredna-grupa-content-slika'>
-          <img src={naslovnaSlika} alt='Lutador Bjj - napredna grupa' />
-          <div className='napredna-grupa-content-slika-footer'>
-            <p>Pridruži se našoj naprednoj grupi</p>
-            <div className='napredna-grupa-footer-buttons'>
-              <button className='btn btn-medium btn-primary'>
-                Prijavi se odmah
-              </button>
-              <button className='btn btn-medium btn-secondary'>
-                Raspored treninga
-              </button>
-            </div>
-          </div>
-        </div>
+
+      <div className='napredna-grupa-footer-buttons'>
+        <button className='btn btn-medium btn-primary'>Prijavi se odmah</button>
+        <button className='btn btn-medium btn-secondary'>
+          Raspored treninga
+        </button>
       </div>
     </div>
   );

@@ -2,8 +2,10 @@
   width: 100vw;
   height: auto;
 
-  background-image: linear-gradient(rgba(27, 27, 27, 0.4), rgba(2, 2, 2, 0.7)),
+  background-image: linear-gradient(rgba(27, 27, 27, 0.2), rgba(2, 2, 2, 0.6)),
     url('../../images/coach_bg-min-KMGIJONY.webp');
+
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -11,8 +13,6 @@
   align-items: center;
   gap: 50px;
 
-  /*   display: grid;
-  grid-template-columns: repeat(2, 1fr); */
   padding: 150px 16%;
 }
 .mateja-valjarevic-slika {
@@ -25,8 +25,59 @@
 }
 .mateja-valjarevic-text p {
   font-size: 1.2rem;
-  line-height: 2rem;
+  line-height: 2.1rem;
   font-weight: 300;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   padding: 0 10px;
+}
+.read-more-button {
+  text-align: right;
+  padding: 40px 10px 10px 10px;
+}
+@media only screen and (max-width: 600px) {
+  .mateja-valjarevic {
+    flex-direction: column;
+    padding: 150px 5%;
+  }
+  .mateja-valjarevic-slika {
+    max-width: 220px;
+    width: 80vw;
+  }
+  .mateja-valjarevic-slika img {
+    width: 100%;
+  }
+  .mateja-valjarevic-text p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  .mateja-valjarevic {
+    flex-direction: column;
+    padding: 150px 10%;
+  }
+  .mateja-valjarevic-slika {
+    max-width: 220px;
+    width: 80vw;
+  }
+  .mateja-valjarevic-slika img {
+    width: 100%;
+  }
+  .mateja-valjarevic-text p {
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .mateja-valjarevic {
+    padding: 150px 5%;
+  }
+  .mateja-valjarevic-slika {
+    min-width: 250px;
+  }
+  .mateja-valjarevic-slika img {
+    width: 100%;
+  }
+  .mateja-valjarevic-text p {
+    font-size: 1.2rem;
+  }
 }

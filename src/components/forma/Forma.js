@@ -4,7 +4,7 @@ import './Forma.css';
 const Forma = () => {
   return (
     <div className='lutador-forma'>
-      <h2>Vas Feedback</h2>
+      <h2>Vaš Feedback</h2>
       <form action=''>
         {/*  <label for='fname'>First Name</label> */}
         <input

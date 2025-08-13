@@ -1,0 +1,72 @@
+.big-banner {
+  background-color: #0e0e0e;
+  padding: 40px 0;
+
+  width: 100vw;
+  height: auto;
+
+  background-image: linear-gradient(rgba(27, 27, 27, 0.2), rgba(2, 2, 2, 0.6)),
+    url('../../images/coach_bg-min-KMGIJONY.webp');
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.scroll {
+  position: relative;
+
+  height: 200px;
+  background-color: transparent;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.scroll img {
+  /*  height: 200px;
+  min-width: 400px; */
+  width: 200px;
+  height: auto;
+}
+
+.m-scroll {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scrollText 150s infinite linear;
+  margin: 0;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(33vw - 150px);
+  width: fit-content;
+  height: 200px;
+}
+
+span {
+  display: inline-block;
+  width: fit-content;
+  margin: 0 20px;
+  padding: 0;
+  color: white;
+}
+
+span.blank {
+  width: 500px !important;
+}
+
+span.FARAL {
+  width: 800px !important;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-90%);
+  }
+}

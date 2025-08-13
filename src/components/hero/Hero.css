@@ -9,18 +9,55 @@
   background-size: cover;
 }
 
-.greeeting-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.logo-mobile {
+  width: 130px;
+  margin: 0 auto;
+  height: auto;
+  padding-bottom: 40px;
+  display: none;
 }
 
-.arrow-down {
-  color: white;
-  font-size: 45px;
+.greeeting-image {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 550px;
+}
+
+.greeeting-image .greeting {
+  width: 100%;
+  animation: fade-in 3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.arrow-down-wrapper {
   position: absolute;
   left: 50%;
   bottom: 10%;
   transform: translateX(-50%);
+
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.arrow-down {
+  display: block;
+
+  color: white;
+  font-size: 45px;
+}
+.arrow-down-wrapper:hover {
+  background-color: rgba(235, 0, 39, 0.2);
+  bottom: 9%;
+}
+@media only screen and (max-width: 992px) {
+  .greeeting-image {
+    width: 70vw;
+    max-width: 550px;
+  }
+  .logo-mobile {
+    display: block;
+  }
 }
