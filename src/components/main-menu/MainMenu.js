@@ -101,7 +101,7 @@ const MainMenu = () => {
           </Link>
         </li>
       </ul>
-      <div className='main-menu-hover'>
+      {/*   <div className='main-menu-hover'>
         <div className='wrap pocetna-wrap'>
           <span
             className={`pocetna-hover ${isActive1 ? 'animacija' : ''}`}
@@ -125,7 +125,7 @@ const MainMenu = () => {
             className={`kontakt-hover ${isActive5 ? 'animacija' : ''}`}
           ></span>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

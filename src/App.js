@@ -1,26 +1,26 @@
 import './App.css';
-import Hero from './components/hero/Hero';
+
 import MainMenu from './components/main-menu/MainMenu';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Treninzi from './components/treninzi/Treninzi';
-import Trener from './components/trener/Trener';
-import Forma from './components/forma/Forma';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Footer from './components/Footer/Footer';
 import Contact from './components/contact/Contact';
-import MobileMenu from './components/main-menu/MobileMenu';
-import BigBanner from './components/big-banner/BigBanner';
+import RasporedTreninga from './components/raspored-treninga/RasporedTreninga';
+import HomePage from './components/pages/HomePage';
+import Treninzi from './components/pages/treninzi/Treninzi';
 /* import MatejaValjarevicBiografija from './components/trener/MatejaValjarevicBiografija'; */
 
 function App() {
   return (
     <Router>
       <div className='App'>
+        <Routes>
+          <Route exact path='/' element={<HomePage />} />
+          <Route path='/raspored-treninga' element={<RasporedTreninga />} />
+          <Route path='/treninzi' element={<Treninzi />} />
+        </Routes>
         <MainMenu />
-        <MobileMenu />
-        <Hero />
-        <Trener />
-        <Treninzi />
-        <BigBanner />
+
         <Contact />
         <Footer />
         {/*  <MatejaValjarevicBiografija /> */}

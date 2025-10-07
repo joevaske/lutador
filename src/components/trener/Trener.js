@@ -4,7 +4,7 @@ import './Trener.css';
 
 const Trener = () => {
   return (
-    <div className='trener'>
+    <div className='trener' id='instruktori'>
       <MatejaValjarevic />
     </div>
   );

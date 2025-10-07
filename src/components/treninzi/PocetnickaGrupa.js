@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Link } from 'react-router';
+import { HashLink } from 'react-router-hash-link';
 import { useInView } from 'react-intersection-observer';
 
 import './PocetnickaGrupa.css';
@@ -9,14 +10,23 @@ import { MdSportsMma } from 'react-icons/md';
 import { GiThreeFriends } from 'react-icons/gi';
 import { GiAllForOne } from 'react-icons/gi';
 
-const PocetnickaGrupa = ({ selected }) => {
+const PocetnickaGrupa = ({
+  selected,
+  setSelectedPTrue,
+  setSelectedPFalse,
+  setSelectedP,
+}) => {
   const { ref, inView } = useInView({
     triggerOnce: true, // only trigger once
     threshold: 0.1, // 10% visible
   });
 
   return (
-    <div className={`pocetnicka-grupa ${inView ? 'animate' : ''}`}>
+    <div
+      className={`pocetnicka-grupa ${inView ? 'animate' : ''}`}
+      onMouseEnter={setSelectedPTrue}
+      onMouseLeave={setSelectedPFalse}
+    >
       <div className='pocetnicka-grupa-content'>
         <div className='pocetnicka-grupa-content-slika'>
           <img src={naslovnaSlika} alt='Lutador Bjj - pocetnicka grupa' />
@@ -59,10 +69,12 @@ const PocetnickaGrupa = ({ selected }) => {
           selected ? 'selected' : ''
         }`}
       >
-        <button className='btn btn-medium btn-primary'>Prijavi se odmah</button>
-        <button className='btn btn-medium btn-secondary'>
+        <HashLink to='/#kontakt' className='btn btn-medium btn-primary'>
+          Prijavi se odmah
+        </HashLink>
+        <Link to='/raspored-treninga' className='btn btn-medium btn-secondary'>
           Raspored treninga
-        </button>
+        </Link>
       </div>
     </div>
   );

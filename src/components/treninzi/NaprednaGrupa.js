@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router';
+import { HashLink } from 'react-router-hash-link';
+
 import './NaprednaGrupa.css';
 import naslovnaSlika from '../../images/advanced_group-min.webp';
 
@@ -27,8 +30,12 @@ const NaprednaGrupa = ({
           </div>
         </div>
       </div>
-      <div className='napredna-grupa-text'>
-        <div className='napredna-grupa-text-tekst-1'>
+      <div className={`napredna-grupa-text ${selected ? 'selected' : ''}`}>
+        <div
+          className={`napredna-grupa-text-tekst-1 ${
+            selected ? 'selected' : ''
+          }`}
+        >
           <p>
             <MdSportsMma className='napredna-grupa-text-icon' />
             Proniknite u tajne tehnika koje koriste svetski šampioni
@@ -49,11 +56,17 @@ const NaprednaGrupa = ({
         </div>
       </div>
 
-      <div className='napredna-grupa-footer-buttons'>
-        <button className='btn btn-medium btn-primary'>Prijavi se odmah</button>
-        <button className='btn btn-medium btn-secondary'>
+      <div
+        className={`napredna-grupa-footer-buttons ${
+          selected ? 'selected' : ''
+        }`}
+      >
+        <HashLink to='/#kontakt' className='btn btn-medium btn-primary'>
+          Prijavi se odmah
+        </HashLink>
+        <Link to='/raspored-treninga' className='btn btn-medium btn-secondary'>
           Raspored treninga
-        </button>
+        </Link>
       </div>
     </div>
   );

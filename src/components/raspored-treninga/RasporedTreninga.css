@@ -1,0 +1,115 @@
+.raspored-treninga {
+  width: 80%;
+  margin: 0 auto;
+  padding: 250px 0 150px 0;
+}
+.raspored-treninga h1 {
+  padding: 40px 20px 40px 10px;
+  color: #f0f0f0;
+}
+.schedule {
+  display: grid;
+  grid-template-columns: 80px repeat(7, minmax(120px, 1fr));
+  /* 1 red za zaglavlje + 12 redova za sate 10–21 */
+
+  gap: 1px;
+  background: #cbd5e1;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Ćelije (grid-bele pločice) */
+.cell {
+  height: 70px;
+  background: white;
+
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Zaglavlja */
+.header {
+  background: #f1f5f9;
+  font-weight: 700;
+}
+
+/* Kolona sa vremenom (prva kolona) */
+.time {
+  background: #eef2f7;
+  font-weight: 600;
+  justify-content: flex-end;
+  padding-right: 10px;
+}
+
+/* Horizontalne linije */
+.cell:not(.header):not(.time) {
+  position: relative;
+}
+.cell:not(.header):not(.time)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #eef2f7;
+}
+
+/* Primer termina */
+.event {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #94a3b8;
+  background: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  padding: 6px;
+  cursor: crosshair;
+}
+.event span {
+  margin: 0;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.581);
+}
+/* Responsivnost */
+@media (max-width: 640px) {
+  .schedule {
+    grid-template-columns: 64px repeat(7, minmax(120px, 1fr));
+    grid-template-rows: auto repeat(12, 44px);
+  }
+  .cell {
+    padding: 6px;
+    font-size: 14px;
+  }
+}
+
+/* Cells */
+
+.event.brown {
+  background: #ffe599;
+}
+
+.event.yellow {
+  background: #ffff00;
+}
+.event.blue {
+  background: #00ffff;
+}
+.event.purple {
+  background: #cf5cde;
+  color: #f0f0f0;
+}
+
+.event.green {
+  background: #00ff00;
+}
